@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Дань Хэн</title>
+    <link rel="stylesheet" href="styles/css/form.css">
+    <style>
+        body {
+            background-image: url('styles/danheng.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <nav class="navig">
+            <ul>
+                <li><a href="index.html" class="nav-item">Главная</a></li>
+                <li><a href="past.html" class="nav-item">Прошлое</a></li>
+                <li><a href="family.html" class="nav-item">Обретение семьи</a></li>
+
+            </ul>
+
+            <div class="zadacha">
+                <ul>
+                    <li><a href="obr.html" class="nav-item">Отзыв</a></li>
+                    <li><a href="pasport.html" class="nav-item">Паспорт</a></li>
+                    <li><a href="zadacha.html" class="nav-item">Задача</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="content-wrapper-form">
+        <div class="content-window-form">
+            <div class="content-form">
+
+                <form action="https://yandex.com/search?" target="_blank" id="data" name="data">
+                    <div class="all-form">
+                        <div class="personal-info">
+                            <h3>Личная информация</h3>
+                            <br>
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                            <br>
+
+                            <label for="surname">Фамилия</label>
+                            <input type="text" id="surname" name="surname" required>
+
+                            <br>
+                            <label for="age">Возраст</label>
+                            <input type="number" id="age" name="age" required>
+
+                            <br>
+                            <label for="country">Страна проживания</label>
+                            <select name="country" id="country">
+                                <option value="russia">Россия</option>
+                                <option value="kazakhstan">Казахстан</option>
+                                <option value="belarus">Беларусь</option>
+                                <option value="other">Другая страна</option>
+                            </select>
+
+                            <br>
+                            <label for="city">Город проживания</label>
+                            <input type="text" id="city" name="city">
+                        </div>
+
+                        <br>
+
+                        <div class="feedback">
+                            <h4>Ваши впечатления о сайте</h4>
+
+                            <textarea name="lore" id="lore"></textarea>
+
+                            <br>
+                            <br>
+                            <label>Оказался ли сайт для вас полезным?
+                                <br>
+                                <input type="radio" name="use"> Да
+                                <input type="radio" name="use"> Нет
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <label> Какие разделы вам понравились больше всего?
+                                <br>
+                                <input type="checkbox" name="like"> Прошлое Дань Хэна
+                                <br>
+                                <input type="checkbox" name="like"> Заоблачный квинтет
+                                <br>
+                                <input type="checkbox" name="like"> Звёздный экспресса
+                                <br>
+                                <input type="checkbox" name="like"> Планеты, которых спасло Освоение
+                                <br>
+                            </label>
+
+                            <br>
+                            <br>
+                            <label for="offer">Есть ли у вас идеи для расширения сайта? Если да, укажите их
+                                внизу:</label>
+                            <br>
+                            <textarea name="offer" id="offer"></textarea>
+                        </div>
+
+                        <br>
+                        <div class="contact-info">
+                            <h4>Обратная связь</h4>
+
+                            <br>
+                            <label for="email">Электронная почта</label>
+                            <input type="email" name="email" id="email" required>
+
+                            <br>
+                            <label for="phone-number">Номер телефона</label>
+                            <input type="tel" name="phone-number" id="phone-number" required>
+                            <br>
+                            <label for="date">Удобная дата для связи</label>
+                            <input type="date" name="date" id="date" required>
+                            <br>
+                            <label for="password">Пароль безопасности</label>
+                            <input type="password" name="password" id="password" required>
+
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="btn">
+                        <input type="submit" id="send-btn" value="Отправить отзыв">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>

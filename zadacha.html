@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Дань Хэн</title>
+    <link rel="stylesheet" href="styles/css/jj.css">
+    <style>
+        body {
+            background-image: url('styles/danheng.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Навигация-->
+    <div class="nav">
+        <nav class="navig">
+            <ul>
+                <li><a href="index.html" class="nav-item">Главная</a></li>
+                <li><a href="past.html" class="nav-item">Прошлое</a></li>
+                <li><a href="family.html" class="nav-item">Обретение семьи</a></li>
+            </ul>
+
+            <div class="zadacha">
+                <ul>
+                    <li><a href="obr.html" class="nav-item">Отзыв</a></li>
+                    <li><a href="pasport.html" class="nav-item">Паспорт</a></li>
+                    <li><a href="zadacha.html" class="nav-item active">Задача</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content-window">
+            <div class="content">
+                <p>Даны вещественные числа: X, Y , Z. Определить, существует ли треугольник с такими длинами сторон и,
+                    если существует, будет ли он прямоугольным.</p><br>
+                <form action="https://yandex.com/search?" target="_blank" id="send-res" name="send-res">
+
+                    <input type="hidden" name="task" id="task">
+
+                    <div class="values">
+                        <div class="x">
+                            <label for="x">Введите Х:</label>
+                            <input type="number" name="x" id="x">
+                        </div>
+
+                        <div class="y">
+                            <label for="y">Введите Y:</label>
+                            <input type="number" name="y" id="y">
+                        </div>
+                        <div class="z">
+                            <label for="z">Введите Z:</label>
+                            <input type="number" name="z" id="z">
+                        </div>
+                    </div>
+
+                    <input type="button" id="solve" class="btn" value="Проверить"></button>
+
+
+
+                    <input type="button" id="send" class="btn hidden"
+                        value="Отправить результат в базу данных"></button>
+
+                </form>
+
+                <form>
+
+                    <div id="solution"></div>
+
+                    <form action="https://yandex.com/search?" id="send-res" name="send-res" target="_blank">
+                        <input type="hidden" name="text" id="search-query">
+
+
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="styles/js/задача.js"></script>
+</body>
+
+</html>

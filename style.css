@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navig li {
+    display: block;
+    float: left;
+    margin: 2px;
+    padding: 0px;
+    border: 2px;
+}
+
+.navig>ul {
+    font-size: 25px;
+    margin-top: 17px;
+}
+
+
+.nav-item {
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgb(0, 30, 19);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.251);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.zadacha {
+    font-size: 25px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.nav-item.active {
+    background-color: rgba(127, 255, 212, 0.405);
+    border-color: rgba(0, 87, 87, 0.541);
+    color: rgb(210, 253, 253);
+    text-shadow: 25px;
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content-window {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 12%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.goriz {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+.nav-arrow.next {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-arrow.next img {
+    width: 100%;
+    height: auto;
+}
+
+.tel {
+    float: left;
+}
+
+.floating-telegram>p {
+font-size: larger;
+font-style: italic;
+color: azure;
+margin-left: 7%;
+}
+
