@@ -7,7 +7,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-li {
+.navig li {
     display: block;
     float: left;
     margin: 2px;
@@ -27,6 +27,14 @@ li {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.nav-item {
     text-decoration: none;
     color: rgb(0, 30, 19);
     padding: 0.75rem 1.5rem;
@@ -36,12 +44,6 @@ li {
     transition: all 0.3s ease;
     font-weight: 500;
 }
-
-.nav {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-}
-
 
 .nav-item:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -61,10 +63,9 @@ li {
     text-shadow: 25px;
 }
 
-
 .content-wrapper {
     position: absolute;
-    top: 130%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -84,105 +85,34 @@ li {
     color: white;
 }
 
-.feng {
-    max-width: 60%;
+.goriz {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    margin-top: 3%;
-    margin-left: 17%;
 }
 
-.content {
+.intro {
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 10px;
     font-size: larger;
 }
 
-.content>p {
-    margin-top: 3%;
+.nav-arrow.next {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
 }
 
-.first {
-    margin-top: 14px;
-}
-
-.df {
-    max-width: 60%;
-    max-height: 60%;
-}
-
-/**/
-.kvi {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Стили для таблицы */
-.ikvi {
-    background-color: rgba(209, 246, 234, 0.411);
-    margin: 20px auto;
-    border-collapse: collapse;
+.nav-arrow.next img {
     width: 100%;
-    table-layout: fixed;
-}
-
-.ikvi td,
-.ikvi th {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.ikvi img {
-    max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/*арт квинтета*/
-.kvi {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+.tel {
+    float: left;
 }
 
-
-
-.titlekvi {
-    background-color: rgba(127, 255, 212, 0.3);
-    color: white;
-    font-weight: bold;
-    padding: 10px 5px;
-    margin: 0;
-}
-
-
-.cold {
-    width: 100px;
-    max-width: 100%;
-    height: 100px;
-    border-radius: 8px;
-    margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.jinglu {
-    font-size: 30px;
-}
-
-.high {
-    font-size: 30px;
-    text-decoration: none;
-    color: inherit;
-    background: none;
-    border: none;
-    outline: none;
-}
