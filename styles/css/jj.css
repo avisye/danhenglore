@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -18,8 +13,12 @@ body {
 .navig>ul {
     font-size: 25px;
     margin-top: 17px;
+    flex-wrap: wrap;
 }
 
+.navig {
+    flex-wrap: wrap;
+}
 
 .nav-item {
     text-decoration: none;
@@ -41,8 +40,8 @@ body {
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.251);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -54,6 +53,7 @@ body {
     display: inline-block;
     position: absolute;
     right: 0;
+    flex-wrap: wrap;
 }
 
 .nav-item.active {
@@ -63,56 +63,268 @@ body {
     text-shadow: 25px;
 }
 
-.content-wrapper {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 800px;
-    padding: 20px;
+.store-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.content-window {
-    position: relative;
+.store-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.store-header-content h1 {
+    color: #001a10;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.641);
+}
+
+.store-catalog p{
+    color: #001a10;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.high{
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    z-index: 1000;
+}
+
+.burger-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #002d1e;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+    .burger-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu li {
+        float: none;
+        margin: 10px 0;
+    }
+
+    .nav-item {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Навигация в магазине */
+.store-nav {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.store-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.store-nav-link {
+    text-decoration: none;
+    color: #002d1e;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 87, 87, 0.3);
+    font-weight: 500;
+}
+
+.store-nav-link:hover,
+.store-nav-link.active {
+    background: rgba(127, 255, 212, 0.3);
+    border-color: rgba(0, 87, 87, 0.5);
+    color: #002d1e;
+}
+
+/* Основной контент магазина */
+.store-catalog {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.store-catalog h2 {
+    color: #002d1e;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.641);
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Карточки товаров */
+.merch-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    padding: 40px;
-    margin-top: 12%;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    color: white;
+    height: 100%;
+    margin-bottom: 40px;
 }
 
-.goriz {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.row {
+    row-gap: 30px !important;
 }
 
-.intro {
-    text-align: center;
-    margin-top: 13px;
-    margin-bottom: 10px;
-    font-size: larger;
-}
-
-.nav-arrow.next {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-}
-
-.nav-arrow.next img {
+.merch-img {
+    height: 200px;
+    object-fit: cover;
     width: 100%;
-    height: auto;
 }
 
-.tel {
-    float: left;
+.merch-card-title {
+    color: #002d1e;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
+.merch-card-text {
+    color: #004d33;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.merch-price {
+    color: #007a4d;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.merch-badge {
+    background: rgba(0, 87, 87, 0.7);
+    color: #e0f7ff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Поле ввода количества */
+.merch-quantity {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 87, 87, 0.3);
+    color: #002d1e;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 80px;
+}
+
+
+/* Кнопка заказа */
+.store-btn {
+    background: rgba(127, 255, 212, 0.3);
+    border: 1px solid rgba(0, 87, 87, 0.5);
+    color: #002d1e;
+    transition: all 0.3s ease;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Футер магазина */
+.store-footer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.store-footer-content p {
+    color: #004d33;
+    text-align: center;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .store-header {
+        padding: 20px;
+    }
+
+    .store-catalog {
+        padding: 15px;
+    }
+
+    .merch-img {
+        height: 180px;
+    }
+
+    .store-btn {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .merch-img {
+        height: 150px;
+    }
+
+    .store-nav ul {
+        justify-content: center;
+    }
+}
